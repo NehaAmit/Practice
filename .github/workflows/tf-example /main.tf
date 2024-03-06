@@ -20,8 +20,7 @@ provider "aws" {
 
 resource "aws_instance" "app_server" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
-  key_name      = "My_Virginia_KeyPair"
+  instance_type = "t2.micro"
 
   tags = {
     Name = var.ec2_name
